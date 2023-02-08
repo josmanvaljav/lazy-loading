@@ -1,0 +1,25 @@
+{
+  "name": "lazy-loading",
+  "version": "1.0.0",
+  "description": "Install Babel and Webpack for building for production: 1) npm install @babel/core babel-loader copy-webpack-plugin html-webpack-plugin webpack webpack-cli webpack-dev-server --save-dev",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Jose Valdivia",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "babel-loader": "^9.1.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "gh-pages": "^5.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
