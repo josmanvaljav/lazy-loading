@@ -12,10 +12,10 @@ const randomNum = () => {
 // Create elements for the images
 const createImageGroup = () => {
     const newDiv = document.createElement("div");
-    newDiv.className = "p-4";
+    newDiv.className = "lazyImageDiv p-4 my-4 mx-auto w-2/5 bg-gray-50 shadow-sm shadow-gray-300";
 
     const newImage = document.createElement("img");
-    newImage.className = "w-60 mx-auto";
+    newImage.className = "mx-auto";
     newImage.dataset.src = `https://randomfox.ca/images/${randomNum()}.jpg`;
 
     newDiv.appendChild(newImage);
@@ -34,3 +34,17 @@ const addImage = () => {
 };
 
 addImageButton.addEventListener("click", addImage);
+
+// Work with the event to clean images
+const cleanButton = document.querySelector("#cleanImages");
+
+const cleanImages = () => {
+    let divImagesAdded = document.querySelector(".lazyImageDiv");
+
+    while (divImagesAdded) {
+        divImagesAdded.remove();
+        divImagesAdded = document.querySelector(".lazyImageDiv");
+    }
+};
+
+cleanButton.addEventListener("click", cleanImages);
